@@ -1,13 +1,16 @@
 # --------------------------- Conway's GameOfLife ---------------------------
 # Autor: MatheusAlves - Github: https://github.com/MatheusAQueiroz/GameOfLife
 
+# Esquemas de cores:
+# Amarelo,Cinza,Branco - (255,255,0),(100,100,100),(150,150,150)
+# Branco,Preto,Preto   - (255,255,255),(0,0,0),(50,50,50)
+# Preto,Branco,Cinza   - (0,0,0),(255,255,255),(200,200,200)
+
 # Variáveis de configuração
-cor_ativa = (255,255,0)
-cor_inativa = (100,100,100)
-cor_grade = (150,150,150)
+cor_ativa,cor_inativa,cor_grade = (255,255,255),(0,0,0),(50,50,50)
 tamanho_grade = 75
-tamanho_quadrado = 8
-grossura_grade = 1
+tamanho_quadrado = 10
+grossura_grade = 0
 margem = 0
 freq = 8
 # Definição automática do tamanho da janela
@@ -89,5 +92,5 @@ while rodando:
         # Evento de saída
         if event.type == pg.QUIT:
             rodando = False
-        clk.tick()
         jogo.calcQuadro()
+        clk.tick(15)
