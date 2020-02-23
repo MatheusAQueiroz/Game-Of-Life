@@ -10,9 +10,8 @@
 cor_ativa,cor_inativa,cor_grade = (255,255,255),(0,0,0),(50,50,50)
 tamanho_grade = 75
 tamanho_quadrado = 10
-grossura_grade = 0
+grossura_grade = 1
 margem = 0
-freq = 8
 # Definição automática do tamanho da janela
 t = (tamanho_quadrado+grossura_grade)*tamanho_grade+2*margem
 (largura, altura) = t,t
@@ -92,5 +91,5 @@ while rodando:
         # Evento de saída
         if event.type == pg.QUIT:
             rodando = False
-        jogo.calcQuadro()
-        clk.tick(15)
+    jogo.calcQuadro()
+    clk.tick(18)
